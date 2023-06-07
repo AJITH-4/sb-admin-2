@@ -1,11 +1,15 @@
     import React from "react"
-
+    import { Link,useNavigate } from "react-router-dom";
 function Sidebar(){
-    return<>
+  
+    let navigate=useNavigate()
+  
+  return<>
+
     <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 {/* <!-- Sidebar - Brand --> */}
-<a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+<a className="sidebar-brand d-flex align-items-center justify-content-center" >
     <div className="sidebar-brand-icon rotate-n-15">
         <i className="fas fa-laugh-wink"></i>
     </div>
@@ -16,12 +20,13 @@ function Sidebar(){
 <hr className="sidebar-divider my-0"/>
 
 {/* <!-- Nav Item - Dashboard --> */}
+<Link to="/dashboard">
 <li className="nav-item active">
-    <a className="nav-link" href="index.html">
+    <a className="nav-link" >
         <i className="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
-
+</Link>
 {/* <!-- Divider --> */}
 {/* <hr className="sidebar-divider"> */}
 
@@ -31,20 +36,46 @@ function Sidebar(){
 </div>
 
 {/* <!-- Nav Item - Pages Collapse Menu --> */}
-<li className="nav-item">
-    <a className="nav-link collapsed" href="javascript(void)" data-toggle="collapse" data-target="#collapseTwo"
-        aria-expanded="true" aria-controls="collapseTwo">
-        <i className="fas fa-fw fa-cog"></i>
-        <span>Components</span>
-    </a>
-    <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div className="bg-white py-2 collapse-inner rounded">
-            <h6 className="collapse-header">Custom Components:</h6>
-            <a className="collapse-item" href="buttons.html">Buttons</a>
-            <a className="collapse-item" href="cards.html">Cards</a>
-        </div>
-    </div>
-</li>
+    <Link to="/add-user">    <li className="nav-item">
+        <a className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Add User</span>
+        </a>
+    
+    </li>
+    </Link>
+
+    <Link to="/profile">
+    <li className="nav-item">
+        <a className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fa-solid fa-address-card"></i>
+            <span>Profile</span>
+        </a>
+    
+    </li>
+    </Link>
+    <Link to="/pending-request">
+    <li className="nav-item">
+        <a className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fa-solid fa-rotate"></i>
+            <span>Pending Request</span>
+        </a>
+    
+    </li>
+    </Link>
+    
+    <li className="nav-item" onClick={()=> navigate("/task")}>
+        <a className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fa-solid fa-list-check"></i>
+            <span>Task</span>
+        </a>
+    
+    </li>
+    
 </ul>
     </>
 }
