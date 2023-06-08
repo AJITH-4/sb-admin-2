@@ -9,12 +9,12 @@ function Sidebar(){
     <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 {/* <!-- Sidebar - Brand --> */}
-<a className="sidebar-brand d-flex align-items-center justify-content-center" >
+<div className="sidebar-brand d-flex align-items-center justify-content-center" >
     <div className="sidebar-brand-icon rotate-n-15">
         <i className="fas fa-laugh-wink"></i>
     </div>
     <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
-</a>
+</div>
 
 {/* <!-- Divider --> */}
 <hr className="sidebar-divider my-0"/>
@@ -22,9 +22,9 @@ function Sidebar(){
 {/* <!-- Nav Item - Dashboard --> */}
 <Link to="/dashboard">
 <li className="nav-item active">
-    <a className="nav-link" >
+    <div className="nav-link" >
         <i className="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <span>Dashboard</span></div>
 </li>
 </Link>
 {/* <!-- Divider --> */}
@@ -37,42 +37,42 @@ function Sidebar(){
 
 {/* <!-- Nav Item - Pages Collapse Menu --> */}
     <Link to="/add-user">    <li className="nav-item">
-        <a className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
+        <div className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fa-solid fa-user-plus"></i>
+            <i className="fa-solid fa-user-plus"></i>
             <span>Add User</span>
-        </a>
+        </div>
     
     </li>
     </Link>
 
     <Link to="/profile">
     <li className="nav-item">
-        <a className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
+        <div className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fa-solid fa-address-card"></i>
+            <i className="fa-solid fa-address-card"></i>
             <span>Profile</span>
-        </a>
+        </div>
     
     </li>
     </Link>
     <Link to="/pending-request">
     <li className="nav-item">
-        <a className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
+        <div className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fa-solid fa-rotate"></i>
+            <i className="fa-solid fa-rotate"></i>
             <span>Pending Request</span>
-        </a>
+        </div>
     
     </li>
     </Link>
     
     <li className="nav-item" onClick={()=> navigate("/task")}>
-        <a className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
+        <div className="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fa-solid fa-list-check"></i>
+            <i className="fa-solid fa-list-check"></i>
             <span>Task</span>
-        </a>
+        </div>
     
     </li>
     
